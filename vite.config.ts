@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
-  base: "/dark-ebook-form/",
+  base: '/dark-ebook-form/',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
