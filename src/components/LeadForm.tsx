@@ -72,28 +72,28 @@ export const LeadForm = ({ open, onOpenChange }: LeadFormProps) => {
         {!isSubmitted ? (
           <>
             <DialogHeader>
-              <DialogTitle className="text-2xl">Get Your Free Ebook</DialogTitle>
+              <DialogTitle className="text-2xl">Baixe Seu Ebook Gratuito</DialogTitle>
               <DialogDescription className="text-base pt-2">
-                Enter your details below to receive instant access to your free download.
+                insira seu nome e e-mail para receber seu ebook gratuito.
               </DialogDescription>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-6 pt-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name">Nome Completo</Label>
                 <Input
                   id="name"
-                  placeholder="John Doe"
+                  placeholder="João Silva"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="border-muted focus:border-primary"
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email">Endereço de Email</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="john@example.com"
+                  placeholder="joao.silva@exemplo.com"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="border-muted focus:border-primary"
@@ -101,10 +101,10 @@ export const LeadForm = ({ open, onOpenChange }: LeadFormProps) => {
               </div>
               <Button type="submit" className="w-full" size="lg">
                 <Download className="mr-2 h-4 w-4" />
-                Download Now
+                Baixar Ebook
               </Button>
               <p className="text-xs text-center text-muted-foreground">
-                We respect your privacy. Unsubscribe at any time.
+                Respeitamos sua privacidade. Cancele a inscrição a qualquer momento.
               </p>
             </form>
           </>
@@ -114,9 +114,9 @@ export const LeadForm = ({ open, onOpenChange }: LeadFormProps) => {
               <CheckCircle2 className="h-16 w-16 text-primary animate-in zoom-in duration-500" />
             </div>
             <DialogHeader>
-              <DialogTitle className="text-2xl">Thank You!</DialogTitle>
+              <DialogTitle className="text-2xl">Obrigado!</DialogTitle>
               <DialogDescription className="text-base pt-2">
-                Your ebook is on its way to your inbox. Check your email for the download link.
+                Seu ebook está a caminho da sua caixa de entrada. Verifique seu email para o link de download.
               </DialogDescription>
             </DialogHeader>
           </div>
